@@ -1,0 +1,178 @@
+:root {
+  font-size: 60%;
+  --color-background: #121214;
+  --color-primary: #252529;
+  --color-secondary: #8257e6;
+  --color-button: #04d361;
+  --color-text: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+
+  padding: 2rem;
+
+  background: var(--color-background);
+}
+
+body {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+#app,
+#app .list-todos,
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#app {
+  width: 90%;
+  min-height: 80%;
+  flex-direction: column;
+
+  position: relative;
+
+  background: var(--color-primary);
+
+  border-radius: 0.8rem;
+}
+
+#app .header {
+  width: 100%;
+  height: 6rem;
+  position: absolute;
+  top: 0;
+  background: var(--color-secondary);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 0.8rem 0.8rem 0 0;
+}
+
+#app h3 {
+  font: 700 2rem Archivo;
+  text-align: center;
+  color: white;
+}
+
+#app .list-todos {
+  width: 100%;
+  flex-direction: column;
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+}
+
+#app .list-todos .noItem {
+  color: var(--color-text);
+
+  font: 700 1.6rem Poppins;
+  list-style-type: none;
+}
+
+#app .list-todos .todo {
+  height: 6rem;
+  width: 90%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 1.2rem;
+  margin-bottom: 5px;
+
+  font: 500 1.4rem Poppins;
+
+  background: var(--color-background);
+  color: var(--color-text);
+
+  list-style-type: none;
+  border-radius: 0.8rem;
+}
+
+#app .input-group {
+  width: 90%;
+  height: 4rem;
+
+  margin-bottom: 1rem;
+  position: absolute;
+  bottom: 0;
+
+  display: flex;
+}
+
+#app .list-todos .todo button {
+  border: none;
+  width: 4rem;
+  height: 4rem;
+
+  background: var(--color-secondary);
+
+  color: var(--color-text);
+
+  font: 700 1.4rem Archivo;
+
+  border-radius: 0.8rem;
+  transition: 0.2s;
+}
+
+#app .list-todos .todo button:hover {
+  background: var(--color-primary);
+  border: 2px solid var(--color-secondary);
+}
+
+#app .list-todos .todo button img {
+  height: 2rem;
+}
+
+#app .input-group input {
+  width: 70%;
+  background: var(--color-text);
+
+  font: 500 1.2rem Archivo;
+
+  padding: 0.8rem;
+
+  border: none;
+
+  border-radius: 0.8rem 0 0 0.8rem;
+}
+
+#app .input-group button {
+  width: 30%;
+  border: none;
+
+  background: var(--color-button);
+  color: #ffff;
+
+  font: 700 1.2rem Archivo;
+
+  border-radius: 0 0.8rem 0.8rem 0;
+  transition: 0.2s;
+}
+
+#app .input-group button:hover {
+  background: var(--color-primary);
+  border: 2px solid var(--color-button);
+}
+
+@media (min-width: 800px) {
+  :root {
+    font-size: 70%;
+  }
+  #app {
+    width: 30%;
+    min-height: 80%;
+  }
+}
